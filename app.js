@@ -9,17 +9,17 @@ app.get('/', (req, res) => {
   res.send('Welcome to my REST API!');
 });
 
-app.get('/api/v1/cats'), (req, res) =>{
+app.get('/api/v1/cats', (req, res) => {
   const cat = {
     cat_id: 1,
-    name: 'Masa',
-    birthdate: '2010-06-06',
-    weight: 6,
-    owner: 2,
-    Image: 'https://loremflickr.com/320/240/cat',
+    name: 'kissi',
+    birthdate: '2021-01-01',
+    weight: 12,
+    owner: 3,
+    image: 'https://loremflickr.com/320/240/cat',
   };
-}
-
+  res.json(cat);
+});
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
